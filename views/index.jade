@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  h1 Pusher API
+
+  form(action="/push", method="POST", role="form")
+    .form-group
+      label(for="event") Event Name
+      input.form-control#event(type="text", placeholder="my_event", name="event")
+
+    .form-group
+      label(for="channel") Channel Name
+      input.form-control#channel(type="text", placeholder="test_channel", name="channel")
+
+    .form-group
+      label(for="message") message
+      textarea.form-control#message(placeholder="hello world", name="message")
+
+    button(type="submit", class="btn btn-default") Send Push
